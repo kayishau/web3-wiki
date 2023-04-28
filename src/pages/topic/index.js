@@ -16,7 +16,7 @@ const Topics = (props) => {
   return (
 
     <div>
-       <Link href='/topics/new'>Create new topic</Link>
+       <Link href='/topic/new'>Create new topic</Link>
 
       {topics.map((topic, index) => {
         return (
@@ -24,11 +24,10 @@ const Topics = (props) => {
             {topic.picture}
             {topic.title}
             {topic.text}
-            <Link href={'/topics/' + topic._id}>Read more</Link>
+            <Link href={`/topic/${topic._id}`}>Read more</Link>
           </div>
         )
       })}
-       
     </div>
   )
 };

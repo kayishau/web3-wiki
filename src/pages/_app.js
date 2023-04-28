@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
     <div>
        <ul>
         <li><Link href='/'>Home</Link></li>
-        <li><Link href='/topics'>Topics</Link></li>
+        <li><Link href='/topic'>Topics</Link></li>
         {/* <li><Link href='/about'>About</Link></li>
         <li><Link href='/about/team'>Team</Link></li> */}
       </ul>
