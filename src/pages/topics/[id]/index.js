@@ -31,7 +31,7 @@ const Topic = (props) => {
 
   return (
     <div>
-         {router.query.id}
+         
             {topic?.picture}
             {topic?.title}
             {topic?.text}
@@ -58,3 +58,9 @@ const deleteTopic = async (id) => {
     }).then((response) => response.json())
    
   }
+
+
+// for the edit page (inside of the ID folder)
+// create a function to edit the topic 
+// grab the topic data and create a state for it, set the default values in the form accordingly to the values in the field => reference this file for grabbing the data and setting as state value
+// carbon footprint has reference for form fields and setting defaults
