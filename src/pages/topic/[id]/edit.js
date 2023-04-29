@@ -22,7 +22,7 @@ const EditTopic = (props) => {
     })
 
     const getTopic = useCallback( async () => {
-        const response = await fetch('http://localhost:3002/topic/'+id);
+        const response = await fetch(`http://localhost:3002/topic/${id}`);
           const data = await response.json();
           data.topic && setState(data.topic);
         
@@ -67,6 +67,8 @@ const EditTopic = (props) => {
           getTopic()
         }
       };
+
+
 
   return (
     <div>
