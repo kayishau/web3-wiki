@@ -36,6 +36,7 @@ const Topic = (props) => {
             {topic?.picture}
             {topic?.title}
             {topic?.text}
+            <button onClick={deleteTopic}>x</button>
             <Link href={`/topic/${topic._id}/edit`}>Edit topic</Link>
     </div>
   )

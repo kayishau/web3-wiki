@@ -28,7 +28,7 @@ const createTopic = async (e) => {
     e.preventDefault();
     setLoading(true);
     try {
-        const response = await fetch('http://localhost:3002/topic', {
+        const response = await fetch('http://localhost:3002/topic/', {
         method: "post",
         headers: {
           Accept: "application/json",

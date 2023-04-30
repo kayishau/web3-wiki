@@ -22,7 +22,7 @@ const EditTopic = (props) => {
     })
 
     const getTopic = useCallback( async () => {
-        const response = await fetch('http://localhost:3002/topic/'+id);
+        const response = await fetch(`http://localhost:3002/topic/${id}`);
           const data = await response.json();
           data.topic && setState(data.topic);
         
@@ -53,7 +53,7 @@ const EditTopic = (props) => {
         setLoading(true);
         try {
             await fetch(`http://localhost:3002/topic/${id}`, {
-            method: "PATCH",
+            method: "PUT",
             headers: {
               Accept: "application/json",
               "Content-Type": "application/json",
@@ -68,8 +68,11 @@ const EditTopic = (props) => {
         }
       };
 
+
+
   return (
-    <div>
+    <>
+     <div>
         <h2>Edit your topic</h2>
         <form onSubmit={handleSubmit}>
         <input className="bg-[blue]" onChange={handleChange} name="picture"  value={state.picture || ""}type="text" placeholder="Update picture URL" />
@@ -80,11 +83,24 @@ const EditTopic = (props) => {
                   {loading ? "Updating..." : "Update Topic"}
         </button>
         </form>
-      
     </div>
+         {/* <div>
+            {topic?.picture}
+            {topic?.title}
+            {topic?.text}
+            <button onClick={deleteTopic}>x</button>
+       </div> */}
+    </>
+   
   )
 };
 
 export default EditTopic;
 
+// const deleteTopic = async (id) => {
+//   const response = await fetch('http://localhost:3002/topic/'+id, {
+//     method: "DELETE"
+//   })
+//   return await response.json()
+// }
 
