@@ -1,15 +1,24 @@
 import Link from "next/link"
+import Head from "next/head"
+
 
 const HomePage = () => {
 
   return (
+    <>
+      <Head>
+        <title>Web3-Wiki</title>
+        <meta name="description" content="Web3 wiki application,explaining topics in web3 like crypto, DAOS, tokenomics,blockchain, zk technology, smart contracts" />
+      </Head>
+
+      <div> 
+        
+        <h2>Web3 Wiki</h2>
+        
+ 
+      </div>
+    </>
   
-    <div> 
-      {/* <button onClick={createTopic}>Create new topic!</button>
-      <button onClick={() => deleteTopic("id")}>X</button> */}
-      <h2>Web3 Wiki</h2>
-     
-    </div>
     
   )
 }
@@ -28,3 +37,7 @@ export default HomePage
 //     }
 //   } 
 // }
+
+// dekete button
+{/* <button onClick={createTopic}>Create new topic!</button>
+        <button onClick={() => deleteTopic("id")}>X</button> */}
