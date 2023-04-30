@@ -2,16 +2,6 @@ import Link from "next/link";
 import React from "react"
 
 
-const CustomLink = ({href, title, className=""}) => {
-    
-    return (
-        <Link href={href} className={`${className} relative`}>
-            {title}
-
-           
-        </Link>
-    )
-}
 
 const NavBar = () => {
 
@@ -23,17 +13,17 @@ const NavBar = () => {
             {/* <div className="border border-black"> */}
             <div className="flex flex-col items-center gap-40 p-20 text-3xl font-bold  ">
 
-            <div className="h-20 w-20 transform -rotate-90 hover:underline">
-                    <CustomLink href="/resources" title="Extra"/>
+            <div className="h-20 w-20 transform -rotate-90 hover:underline ">
+                    <Link href="/resources">Extra</Link>
                 </div>
                 <div className="h-20 w-20 transform -rotate-90 hover:underline ">
-                    <CustomLink href="/topic" title="Topics"/>
+                    <Link href="/topic">Topics</Link>
                 </div>
-                <div className="h-20 w-20 transform -rotate-90 hover:underline">
-                     <CustomLink href="/overview" title="Overview"/>
+                <div className="h-20 w-20 transform -rotate-90 hover:underline ">
+                     <Link href="/overview">Overview</Link>
                 </div>
-                <div className="h-20 w-20 transform -rotate-90 hover:underline">
-                    <CustomLink href="/" title="Home"/>
+                <div className="h-20 w-20 transform -rotate-90 hover:underline ">
+                    <Link href="/">Home</Link>
                 </div>
 
             </div>
