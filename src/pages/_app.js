@@ -3,7 +3,7 @@ import Link from "next/link";
 // import { Rajdhani } from "next/font/google";
 import { Jura } from "next/font/google";
 import Head from "next/head"
-import NavBar from "@/components/NavBar";
+// import NavBar from "@/components/NavBar";
 
 // const rajdhani = Rajdhani({
 //   weight: ["300", "400", "500", "600", "700"],
@@ -25,8 +25,8 @@ export default function App({ Component, pageProps }) {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-      <main className={`${jura.className} font-jura bg-darkGrey w-full min-h-screen` }>
-        <NavBar />
+      <main className={`${jura.className} font-jura bg-darkGrey w-full min-h-screen overflow-x-scroll` }>
+        {/* <NavBar /> */}
       <Component {...pageProps} />
         {/* <div>
           <ul>
