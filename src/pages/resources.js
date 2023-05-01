@@ -1,6 +1,7 @@
 import React from "react"
-import NavBar from "@/components/NavBar";
-import Head from "next/head";
+import NavBar from "@/components/NavBar"
+import Head from "next/head"
+import TransitionEffect from "@/components/TransitionEffect";
 
 
 const Extra = (props) => {
@@ -10,7 +11,8 @@ const Extra = (props) => {
       <title>Web3-Wiki | Resources </title>
       <meta name="description" content="Web3 wiki application,explaining topics in web3 like crypto, DAOS, tokenomics,blockchain, zk technology, smart contracts" />
     </Head>
-    <main className="flex w-full min-h-screen">
+    <TransitionEffect />
+    <main className="flex w-full min-h-screen text-lightGrey">
       <NavBar />
       <div className="flex m-5">
 

@@ -5,6 +5,7 @@ import NavBar from "@/components/NavBar";
 import Image from "next/image";
 import dao from "../../../public/images/topics/DAO.png"
 
+
 const Topics = (props) => {
   let [topics, setTopics] = useState([]);
 
@@ -36,10 +37,10 @@ const Topics = (props) => {
 
   return (
     <>
-      <div className="flex">
+      <main className="flex text-lightGrey">
         <NavBar />
 
-        <div className="bg-lightGrey min-h-screen min-w-screen flex flex-col">
+        <div className="min-h-screen min-w-screen flex flex-col">
         <div className="flex w-full justify-start text-4xl font-bold py-10 px-10 ">
             <h1>Explore the Different Concepts</h1>
           </div>
@@ -68,7 +69,7 @@ const Topics = (props) => {
           </div>
         {/* </div> */}
 
-      </div>
+      </main>
     </>
   );
 };

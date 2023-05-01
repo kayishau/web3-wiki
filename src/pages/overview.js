@@ -10,7 +10,7 @@ const Overview = (props) => {
         <title>Web3-Wiki | Overview</title>
         <meta name="description" content="Web3 wiki application,explaining topics in web3 like crypto, DAOS, tokenomics,blockchain, zk technology, smart contracts" />
       </Head>
-      <main className="flex w-full min-h-screen">
+      <main className="flex w-full min-h-screen text-lightGrey">
         <NavBar />
     
         <div className="flex flex-col w-full h-1/6 text-5xl font-semibold mx-20 mt-20" >

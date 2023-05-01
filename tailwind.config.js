@@ -14,10 +14,10 @@ module.exports = {
       },
     },
     colors:{
-      darkGrey:'#807A79',
+      darkGrey:'#222222',
       lightGrey:'#BABABA',
       mediumOrange:"#F28903",
-      hotOrange:"#F24804"
+      hotOrange:"#FF7324"
     }
   },
   plugins: [],
