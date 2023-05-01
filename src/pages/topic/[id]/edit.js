@@ -1,6 +1,8 @@
 import React from "react"
 import { useState, useEffect, useCallback } from "react"
 import { useRouter } from "next/router"
+import Head from "next/head";
+import NavBar from "@/components/NavBar";
 
 const EditTopic = (props) => {
 
@@ -68,10 +70,23 @@ const EditTopic = (props) => {
         }
       };
 
+      const deleteTopic = async (id) => {
+        const response = await fetch('http://localhost:3002/topic/'+id, {
+          method: "DELETE",
+        })
+        return await response.json()
+      }
+
 
 
   return (
     <>
+     <Head>
+        <title>Web3-Wiki | Overview</title>
+        <meta name="description" content="Web3 wiki application,explaining topics in web3 like crypto, DAOS, tokenomics,blockchain, zk technology, smart contracts" />
+      </Head>
+      <main className="flex w-full min-h-screen text-lightGrey">
+        <NavBar />
      <div>
         <h2>Edit your topic</h2>
         <form onSubmit={handleSubmit}>
@@ -82,6 +97,7 @@ const EditTopic = (props) => {
          <button disabled={loading}>
                   {loading ? "Updating..." : "Update Topic"}
         </button>
+        <button onClick={() => deleteTopic("id")}>X</button>
         </form>
     </div>
          {/* <div>
@@ -90,6 +106,7 @@ const EditTopic = (props) => {
             {topic?.text}
             <button onClick={deleteTopic}>x</button>
        </div> */}
+       </main>
     </>
    
   )
@@ -97,10 +114,8 @@ const EditTopic = (props) => {
 
 export default EditTopic;
 
-// const deleteTopic = async (id) => {
-//   const response = await fetch('http://localhost:3002/topic/'+id, {
-//     method: "DELETE"
-//   })
-//   return await response.json()
-// }
 
+
+// delete button
+
+  

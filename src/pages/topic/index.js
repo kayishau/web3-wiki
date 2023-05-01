@@ -60,7 +60,10 @@ const Topics = (props) => {
                 {topic.picture}
                 {topic.title}
                 {topic.text}
-                <Link href={`/topic/${topic._id}`}>Read more</Link>
+                <div>
+                 <Link href={`/topic/${topic._id}`}>Read more</Link>
+                </div>
+               
               </div>
             );
           })}

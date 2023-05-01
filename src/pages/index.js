@@ -59,10 +59,10 @@ const HomePage = () => {
         </div>
         <div className="w-1/12 h-auto ml-10 text-lightGrey">
         <Link href="/">Home</Link>
-        <Link href="/overview">Overview</Link>
         <Link href="/topic">Topics</Link>
         <Link href="/resources">Extra</Link>
-          <DownArrow />
+         <Link href="/overview"> <DownArrow /></Link>
+         
         </div>
       </main>
     </>

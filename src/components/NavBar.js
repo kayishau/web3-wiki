@@ -2,16 +2,16 @@ import Link from "next/link";
 import React from "react"
 
 
-const CustomLink = ({href, title, className=""}) => {
+// const CustomLink = ({href, title, className=""}) => {
     
-    return (
-        <Link href={href} className={`${className} relative`}>
-            {title}
+//     return (
+//         <Link href={href} className={`${className} relative`}>
+//             {title}
 
            
-        </Link>
-    )
-}
+//         </Link>
+//     )
+// }
 
 const NavBar = () => {
 

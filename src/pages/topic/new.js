@@ -1,5 +1,7 @@
 import React from "react"
 import { useState } from 'react';
+import Head from "next/head";
+import NavBar from "@/components/NavBar";
 
 const NewTopic = (props) => {
 
@@ -56,8 +58,14 @@ const createTopic = async (e) => {
   }
 
   return (
-    <div>
-        {/* <Head></Head> */}
+    <>
+       <Head>
+        <title>Web3-Wiki | Overview</title>
+        <meta name="description" content="Web3 wiki application,explaining topics in web3 like crypto, DAOS, tokenomics,blockchain, zk technology, smart contracts" />
+      </Head>
+      <main className="flex w-full min-h-screen text-lightGrey">
+        <NavBar />
+      
         <h2> Create (+) - What's new in Web3?</h2>
         <form onSubmit={createTopic}>
         <input className="bg-[blue]" onChange={handleChange} name="picture"  value={state.picture}type="text" placeholder="Enter picture URL" />
@@ -69,8 +77,8 @@ const createTopic = async (e) => {
         </button>
         </form>
      
-
-    </div>
+    </main>
+    </>
   )
 };
 
