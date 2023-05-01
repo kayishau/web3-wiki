@@ -1,15 +1,20 @@
 import Link from "next/link"
 import Head from "next/head"
+import TransitionEffect from "@/components/TransitionEffect"
+
 
 
 const HomePage = () => {
 
   return (
     <>
+   
       <Head>
         <title>Web3-Wiki</title>
         <meta name="description" content="Web3 wiki application,explaining topics in web3 like crypto, DAOS, tokenomics,blockchain, zk technology, smart contracts" />
       </Head>
+
+     <TransitionEffect />
 
       <div> 
         
